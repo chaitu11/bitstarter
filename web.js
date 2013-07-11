@@ -5,7 +5,7 @@ var data = fs.readFileSync(filename,"utf8");
 var app = express.createServer(express.logger());
 var buf = new Buffer(data);
 app.get('/', function(request, response) {
-  response.send("Hello, This is chaitanya's website");
+  response.send(buf.toString(data));
 });
 
 var port = process.env.PORT || 5000;
